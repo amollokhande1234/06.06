@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+int main(){
+	string client[10] = {"0"};
+	int arr[10] = {0};
+	int size = 10;
+	int key,d,col = 0,count = 0,num;
+	
+	
+	while(count == 0){
+	
+	cout<<"Enter Choice :"<<endl;
+	cout<<"1 Insert Data "<<endl;
+	cout<<"2 Search Data "<<endl;
+	cout<<"0 Exit "<<endl;
+	
+	cin>>count;
+	if(count == 1){
+
+	for(int i=0; i<size; i++){
+		cout<<"Name  and Telephone no : "<<endl;
+		cin>>client[i];
+		cin>>key;
+		d = key % size;
+	
+	for(int i=0; i<size; i++){
+		if(arr[d]>0){
+			d++;
+			col++;
+		}
+	}
+	arr[d]=key;
+	
+	for(int i=0; i<size; i++){
+		cout<<arr[i]<<endl;
+		}
+	}
+}
+	if(count == 2){
+
+	while(count == 2){
+		cout<<"Enter teleNum : "<<endl;
+		cin>>num;
+		for(int i=0; i<size; i++){
+			if(arr[d]==num){
+				cout<<"Number Fount at !"<<d<<endl;
+			}
+		}
+	}
+
+	cout<<"Collision = "<<col<<endl;
+	cout<<"Enter Choice 0/1 = ";
+	cin>>count;
+	}
+}
+
+	return 0;
+}
